@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -28,7 +28,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-16 grid md:grid-cols-3 gap-6"
+                    className="mt-16 grid md:grid-cols-2 gap-6"
                 >
                     {/* Email */}
                     <motion.a
@@ -40,7 +40,7 @@ const Contact = () => {
                             <Mail className="w-5 h-5" />
                         </div>
                         <h3 className="font-semibold text-ink">Email</h3>
-                        <p className="font-mono text-sm text-ink-muted mt-1">
+                        <p className="font-mono text-sm text-ink-muted mt-1 break-all">
                             ajfosmire@gmail.com
                         </p>
                     </motion.a>
@@ -64,19 +64,6 @@ const Contact = () => {
                         </p>
                     </motion.a>
 
-                    {/* Location */}
-                    <motion.div
-                        whileHover={{ y: -4 }}
-                        className="group p-6 rounded-xl bg-surface border border-border transition-all hover:shadow-lg"
-                    >
-                        <div className="w-12 h-12 rounded-lg bg-sand flex items-center justify-center mb-4 group-hover:bg-clay group-hover:text-white transition-colors">
-                            <MapPin className="w-5 h-5" />
-                        </div>
-                        <h3 className="font-semibold text-ink">Location</h3>
-                        <p className="font-mono text-sm text-ink-muted mt-1">
-                            Auburndale, FL
-                        </p>
-                    </motion.div>
                 </motion.div>
 
                 {/* CTA */}

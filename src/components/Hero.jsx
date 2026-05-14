@@ -49,11 +49,24 @@ const Hero = () => {
                     </p>
                 </div>
 
+                {/* Professional Summary */}
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.7 }}
+                    className="mt-6 max-w-2xl text-base text-ink-subtle leading-relaxed"
+                >
+                    Security and software engineer with 3+ years of experience spanning enterprise security infrastructure,
+                    AI-powered automation, and full-stack development. Skilled in Python scripting, firewall management
+                    across multiple platforms, and DevOps pipeline development. Previously interned at Red Hat building
+                    production APIs and maintaining large codebases.
+                </motion.p>
+
                 {/* Interactive CTA */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.8 }}
+                    transition={{ duration: 0.6, delay: 2 }}
                     className="mt-16 flex gap-4"
                 >
                     <motion.a
@@ -82,14 +95,14 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 2 }}
+                    transition={{ duration: 0.6, delay: 2.2 }}
                     className="mt-12 flex items-center gap-2 text-sm text-ink-subtle"
                 >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    Auburndale, FL
+                    Florida
                 </motion.div>
             </div>
         </section>

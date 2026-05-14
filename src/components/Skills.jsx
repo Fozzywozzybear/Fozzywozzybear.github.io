@@ -5,40 +5,39 @@ const skillsData = {
     "Languages & Frameworks": [
         { name: "Python", level: "Expert" },
         { name: "Java", level: "Proficient" },
-        { name: "SQL (PostgreSQL)", level: "Entry" },
+        { name: "JavaScript", level: "Proficient" },
+        { name: "SQL (PostgreSQL)", level: "Proficient" },
         { name: "Django", level: "Entry" }
     ],
     "Security & Networking": [
         { name: "Palo Alto Networks", level: "Expert" },
+        { name: "NSX DFW", level: "Expert" },
+        { name: "Checkpoint", level: "Proficient" },
+        { name: "Tufin", level: "Expert" },
         { name: "Firewalls", level: "Expert" },
         { name: "VPNs", level: "Proficient" },
-        { name: "IDS/IPS", level: "Expert" },
-        { name: "NSX DFW", level: "Expert" },
-        { name: "Checkpoint", level: "Proficient" }
+        { name: "IDS/IPS", level: "Expert" }
     ],
-    "DevOps & Automation": [
+    "Cloud & DevOps": [
         { name: "Azure DevOps", level: "Expert" },
         { name: "Git", level: "Expert" },
         { name: "Docker", level: "Entry" },
-        { name: "Power Automate", level: "Entry" },
-        { name: "CI/CD Pipelines", level: "Expert" }
+        { name: "Microsoft Power Automate", level: "Proficient" }
     ],
-    "AI-Assisted Development": [
-        { name: "GitHub Copilot", level: "Expert" },
-        { name: "Claude Code", level: "Entry" },
-        { name: "Gemini CLI", level: "Entry" },
-        { name: "AI Agent Development", level: "Entry" },
-        { name: "Prompt Engineering", level: "Proficient" }
-    ],
-    "Security Tools": [
-        { name: "Tufin", level: "Expert" },
-        { name: "VirtualBox", level: "Entry" },
-        { name: "Splunk", level: "Entry" }
+    "AI & Automation": [
+        { name: "AI Agents", level: "Proficient" },
+        { name: "LLM-based Tooling", level: "Proficient" },
+        { name: "Workflow Automation", level: "Expert" },
+        { name: "Scripting", level: "Expert" },
+        { name: "Claude Code", level: "Proficient" },
+        { name: "VS Code Copilot", level: "Expert" },
+        { name: "Codex", level: "Entry" }
     ],
     "Platforms": [
         { name: "Windows Server", level: "Expert" },
-        { name: "Linux (Ubuntu)", level: "Entry" },
-        { name: "macOS", level: "Proficient" }
+        { name: "Linux (Ubuntu)", level: "Proficient" },
+        { name: "macOS", level: "Proficient" },
+        { name: "VirtualBox", level: "Entry" }
     ]
 };
 
@@ -104,7 +103,6 @@ const Skills = () => {
                                             {skill.name}
                                         </span>
 
-                                        {/* Level indicator */}
                                         <motion.span
                                             initial={{ opacity: 0, x: 10 }}
                                             animate={{
@@ -144,7 +142,7 @@ const Skills = () => {
                     </div>
                 </motion.div>
 
-                {/* Additional Skills */}
+                {/* Core Competencies */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

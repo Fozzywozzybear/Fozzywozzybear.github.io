@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Education = () => {
     const [showLion, setShowLion] = useState(false);
@@ -35,7 +35,7 @@ const Education = () => {
                                     The Pennsylvania State University
                                 </h3>
                                 <p className="text-ink-muted mt-2">
-                                    Bachelor of Cybersecurity Analytics and Operations
+                                    B.S. in Cybersecurity Analytics and Operations
                                 </p>
                             </div>
                             <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ const Education = () => {
                             </div>
                         </div>
 
-                        {/* Easter Egg - Nittany Lion */}
+                        {/* Easter Egg - Nittany Lion button */}
                         <motion.div
                             className="absolute bottom-4 right-4 cursor-pointer"
                             onClick={() => setShowLion(!showLion)}
@@ -75,38 +75,40 @@ const Education = () => {
                                     src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
                                     alt="Nittany Lion"
                                     className="w-7 h-7 object-contain"
+                                    crossOrigin="anonymous"
                                 />
                             </div>
                         </motion.div>
 
-                        {/* Hidden Nittany Lion Art */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{
-                                opacity: showLion ? 1 : 0,
-                                scale: showLion ? 1 : 0.8,
-                                y: showLion ? 0 : 20
-                            }}
-                            transition={{ duration: 0.4, ease: "easeOut" }}
-                            className={`mt-6 pt-6 border-t border-border ${showLion ? 'block' : 'hidden'}`}
-                        >
-                            <div className="flex items-center gap-6 p-6 bg-[#041E42] rounded-lg">
-                                {/* Nittany Lion Logo */}
-                                <motion.img
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
-                                    alt="Penn State Nittany Lions"
-                                    className="w-20 h-20 object-contain"
-                                    initial={{ rotate: 0 }}
-                                    animate={{ rotate: showLion ? [0, -5, 5, 0] : 0 }}
-                                    transition={{ duration: 0.5, delay: 0.2 }}
-                                />
-                                <div className="flex-1">
-                                    <p className="font-serif text-2xl text-white font-bold">We Are!</p>
-                                    <p className="text-sm text-blue-200 mt-1">Penn State Nittany Lions</p>
-                                    <p className="text-xs text-blue-300 mt-2 font-mono">Class of 2023 🎓</p>
-                                </div>
-                            </div>
-                        </motion.div>
+                        {/* Hidden Nittany Lion Art — AnimatePresence handles mount/unmount */}
+                        <AnimatePresence>
+                            {showLion && (
+                                <motion.div
+                                    key="lion-panel"
+                                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                    className="mt-6 pt-6 border-t border-border"
+                                >
+                                    <div className="flex items-center gap-6 p-6 bg-[#041E42] rounded-lg">
+                                        <motion.img
+                                            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
+                                            alt="Penn State Nittany Lions"
+                                            className="w-20 h-20 object-contain"
+                                            crossOrigin="anonymous"
+                                            animate={{ rotate: [0, -5, 5, 0] }}
+                                            transition={{ duration: 0.5, delay: 0.2 }}
+                                        />
+                                        <div className="flex-1">
+                                            <p className="font-serif text-2xl text-white font-bold">We Are!</p>
+                                            <p className="text-sm text-blue-200 mt-1">Penn State Nittany Lions</p>
+                                            <p className="text-xs text-blue-300 mt-2 font-mono">Class of 2023 🎓</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 </motion.div>
             </div>

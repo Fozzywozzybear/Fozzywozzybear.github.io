@@ -7,28 +7,29 @@ const experienceData = [
         company: "Publix Super Markets",
         role: "Information Security Engineer II",
         location: "Lakeland, FL",
-        period: "April 2024 - Current",
+        period: "April 2025 – Present",
         status: "active",
         highlights: [
-            "Designed and implemented a metrics-driven compliance tracking system, breaking down queries into daily, weekly, and monthly intervals with a cumulative dashboard for visibility and reporting.",
-            "Developed AI-powered agents to streamline internal processes, enabling teams to generate firewall requests and access on-call information quickly and efficiently.",
-            "Built a cross-platform health check workflow to monitor firewall and service status, delivering automated daily summaries to enhance team situational awareness.",
-            "Leveraged AI to optimize codebase performance, improving script runtimes by 25–60% while maintaining readability and scalability for future development."
+            "Built and deployed LLM-powered agentic workflows that automated internal security operations, giving teams the ability to generate firewall change requests and pull on-call data through natural language, cutting manual processing time significantly.",
+            "Engineered an automated compliance tracking system with AI-assisted reporting pipelines delivering daily, weekly, and monthly dashboards to security and upper management, improving security posture visibility and reducing manual reporting overhead.",
+            "Built a Python-based automated health monitoring workflow spanning multiple firewall platforms and services, delivering AI-generated daily status digests that gave the team proactive, real-time situational awareness.",
+            "Applied LLM-assisted code optimization techniques to refactor Python automation scripts, achieving 25–60% runtime improvements while preserving readability and long-term maintainability.",
+            "Designed and delivered a scripted migration automation framework that replaced repetitive manual data-gathering processes, cutting recurring engineering overhead by several hours per week and freeing the team for higher-impact work."
         ],
-        tags: ["AI Automation", "Security Metrics", "Python"]
+        tags: ["LLM Agents", "AI Automation", "Python", "Security Metrics"]
     },
     {
         id: 2,
         company: "Publix Super Markets",
         role: "Information Security Engineer I",
         location: "Lakeland, FL",
-        period: "Previous Role",
+        period: "April 2024 – April 2025",
         status: "completed",
         highlights: [
-            "Upgraded authentication methods on python scripts utilizing token authentication, improving run times by 5-10x speed.",
-            "Created an Azure DevOps pipeline to automate creation of firewall rules using Microsoft Power Automate.",
-            "Developed Azure DevOps pipelines to generate metrics from Tufin queries and firewalls, providing valuable insights for security posture improvement.",
-            "Successfully implemented over 100 firewall rules across Palo Alto, NSX DFW, and Checkpoint platforms, strengthening network security and compliance."
+            "Created an Azure DevOps pipeline integrated with Microsoft Power Automate to automate firewall rule creation, eliminating manual ticketing steps from the provisioning workflow.",
+            "Developed pipelines to generate security metrics from Tufin queries and firewall data, providing actionable insights for ongoing compliance and posture improvement.",
+            "Implemented 100+ firewall rules across Palo Alto, NSX DFW, and Checkpoint platforms, strengthening network segmentation and regulatory compliance.",
+            "Upgraded Python script authentication from legacy methods to token-based auth, achieving 5–10x performance improvement in automated workflows."
         ],
         tags: ["Azure DevOps", "Firewall Management", "Automation"]
     },
@@ -40,9 +41,8 @@ const experienceData = [
         period: "May 2022 – Aug. 2022",
         status: "completed",
         highlights: [
-            "Upgraded the project's framework of Django and Python, requiring a rewrite of our database models for security and efficiency.",
-            "Created an internal API allowing co-workers to complete local testing more efficiently, reducing testing times and GitHub workflow load.",
-            "Completed software maintenance across the codebase, requiring a vast understanding of the internal codebase and external workflows."
+            "Upgraded Django and Python framework versions across the codebase, rewriting database models to improve security and long-term maintainability.",
+            "Built an internal API to enable local testing workflows for the engineering team, reducing testing cycle times and GitHub Actions usage."
         ],
         tags: ["Django", "Python", "API Development"]
     },
@@ -54,9 +54,8 @@ const experienceData = [
         period: "May 2021 – Dec. 2021",
         status: "completed",
         highlights: [
-            "Created API's that enabled customers to search faster with auto complete recommendations.",
-            "Worked with quality assurance engineers to develop unit tests and documentation for future testing, ensuring the quality and reliability of the software.",
-            "Redesigned database models to improve the efficiency of database queries, making the software more responsive and scalable."
+            "Developed APIs enabling autocomplete search recommendations, improving end-user experience and search responsiveness.",
+            "Partnered with QA engineers to write unit tests and developer documentation, increasing test coverage and reducing onboarding friction."
         ],
         tags: ["API Design", "QA", "Database Optimization"]
     }
