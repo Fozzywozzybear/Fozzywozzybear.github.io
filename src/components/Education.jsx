@@ -75,7 +75,6 @@ const Education = () => {
                                     src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
                                     alt="Nittany Lion"
                                     className="w-7 h-7 object-contain"
-                                    crossOrigin="anonymous"
                                 />
                             </div>
                         </motion.div>
@@ -96,7 +95,6 @@ const Education = () => {
                                             src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
                                             alt="Penn State Nittany Lions"
                                             className="w-20 h-20 object-contain"
-                                            crossOrigin="anonymous"
                                             animate={{ rotate: [0, -5, 5, 0] }}
                                             transition={{ duration: 0.5, delay: 0.2 }}
                                         />
