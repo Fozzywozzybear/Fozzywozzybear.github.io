@@ -72,7 +72,7 @@ const Education = () => {
                         >
                             <div className="w-10 h-10 rounded-full bg-[#041E42] border-2 border-white shadow-md flex items-center justify-center overflow-hidden">
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
+                                    src="/penn-state-lion.svg"
                                     alt="Nittany Lion"
                                     className="w-7 h-7 object-contain"
                                 />
@@ -92,7 +92,7 @@ const Education = () => {
                                 >
                                     <div className="flex items-center gap-6 p-6 bg-[#041E42] rounded-lg">
                                         <motion.img
-                                            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/1200px-Penn_State_Nittany_Lions_logo.svg.png"
+                                            src="/penn-state-lion.svg"
                                             alt="Penn State Nittany Lions"
                                             className="w-20 h-20 object-contain"
                                             animate={{ rotate: [0, -5, 5, 0] }}
